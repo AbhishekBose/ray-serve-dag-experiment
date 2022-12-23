@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  ray-dag-exp:
+    build: .
+    command: bash run.sh
+    environment:
+      PYTHONUNBUFFERED: 1
+#    env_file:
+#      - .env
+    volumes:
+      - /dev/shm:/dev/shm
+      - .:/app
+    ports:
+      - "8000:8000"
+      - "8265:8265"

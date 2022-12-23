@@ -1,0 +1,2 @@
+from .azure_deployment import azure_deployment
+from .detectron_deployment import detectron_deployment
